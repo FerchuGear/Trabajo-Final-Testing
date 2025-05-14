@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.producto img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    padding: 10px 0;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra de desplazamiento */
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color del pulgar de la barra */
+    border-radius: 4px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #aaa; /* Color al pasar el mouse */
+}
+
+.slider-track {
+    display: flex;
+    gap: 10px; /* Espaciado entre las tarjetas */
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 auto; /* Evita que las tarjetas se reduzcan o expandan */
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Diseños para Tablets */
+@media (max-width: 1024px) {
+    
+}
+
+/* Diseños para Celulares */
+@media (max-width: 768px) {
+    
+}
