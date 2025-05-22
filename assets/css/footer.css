@@ -15,3 +15,15 @@ footer a {
     color: white;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        margin: 0 3px;
+    }
+}
