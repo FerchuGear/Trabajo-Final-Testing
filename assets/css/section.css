@@ -4,24 +4,23 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-x: hidden;
 }
 
 .container {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 20px;
-    transition: margin-left 0.3s ease; /* Animación para el contenido */
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    transition: margin-left 0.3s ease, padding-left 0.3s ease;
+    box-sizing: border-box;
 }
 
 .container.maximized {
-    margin-left: 250px; /* Solo cuando el panel está maximizado */
+    padding-left: 290px; /* Aplica el padding solo cuando la barra está abierta */
 }
 
 .container.shifted {
-    margin-left: 0; /* Ajustar cuando el panel esté minimizado */
+    padding-left: 40px; /* Sin padding cuando la barra está minimizada */
 }
 
 main {

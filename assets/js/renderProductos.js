@@ -131,6 +131,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const footer = document.querySelector('footer');
 
+    // Sincronizar el estado visual al cargar la página
+    if (sidePanel && container && header && footer && toggleButton) {
+        if (sidePanel.classList.contains('minimized')) {
+            container.classList.remove('maximized');
+            container.classList.add('shifted');
+            header.classList.remove('maximized');
+            header.classList.add('shifted');
+            footer.classList.remove('maximized');
+            footer.classList.add('shifted');
+            toggleButton.innerHTML = '&rarr;';
+        } else {
+            container.classList.remove('shifted');
+            container.classList.add('maximized');
+            header.classList.remove('shifted');
+            header.classList.add('maximized');
+            footer.classList.remove('shifted');
+            footer.classList.add('maximized');
+            toggleButton.innerHTML = '&larr;';
+        }
+    }
+
     toggleButton.addEventListener('click', () => {
         // Alternar la clase 'minimized' en el panel
         sidePanel.classList.toggle('minimized');

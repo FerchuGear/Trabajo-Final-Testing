@@ -20,6 +20,25 @@ function añadirAlCarrito(producto) {
     actualizarCarritoCount();
 }
 
+// Añadir listeners a los botones de "Agregar al carrito"
+document.addEventListener('DOMContentLoaded', () => {
+    actualizarCarritoCount();
+
+    // Suponiendo que los botones tienen la clase 'add-to-cart'
+    const botonesAgregar = document.querySelectorAll('.add-to-cart');
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', () => {
+            // Puedes obtener los datos del producto desde atributos data-*
+            const producto = {
+                id: boton.getAttribute('data-id'),
+                nombre: boton.getAttribute('data-nombre'),
+                precio: boton.getAttribute('data-precio')
+            };
+            añadirAlCarrito(producto);
+        });
+    });
+});
+
 //Cargar el contador al iniciar la página
 window.addEventListener('DOMContentLoaded', () => {
     actualizarCarritoCount();
