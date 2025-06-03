@@ -3,6 +3,9 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    transition: margin-left 0.3s ease; /* Animación para el margen dinámico */
 }
 
 .social-icons img {
@@ -14,6 +17,14 @@ footer {
 footer a {
     color: white;
     text-decoration: underline;
+}
+
+footer.maximized {
+    margin-left: 250px; /* Solo cuando el panel está maximizado */
+}
+
+footer.shifted {
+    margin-left: 0; /* Ajustar cuando el panel esté minimizado */
 }
 
 @media (max-width: 768px) {

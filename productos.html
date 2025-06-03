@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroUADE</title>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/section.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Panel lateral para filtros -->
+        <aside class="side-panel">
+            <button id="toggle-panel" class="toggle-panel">&larr;</button>
+            <h3>Filtrar por categoría</h3>
+            <form id="filter-form">
+                <label>
+                    <input type="checkbox" value="Tablets" class="filter-checkbox"> Tablets
+                </label>
+                <label>
+                    <input type="checkbox" value="Celulares" class="filter-checkbox"> Celulares
+                </label>
+                <label>
+                    <input type="checkbox" value="Computadoras" class="filter-checkbox"> Computadoras
+                </label>
+            </form>
+        </aside>
+
+        <!-- Sección principal -->
+        <main>
+            <h1 id="productos">Productos en lista</h1>
+
+            <!-- Slider para Tablets -->
+            <section>
+                <h2>Tablets</h2>
+                <div class="slider">
+                    <div class="slider-track">
+                        <!-- Los productos de productos.js se cargan aquí -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slider para Celulares -->
+            <section>
+                <h2>Celulares</h2>
+                <div class="slider">
+                    <div class="slider-track">
+                        <!-- Los productos de productos.js se cargan aquí -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slider para Computadoras -->
+            <section>
+                <h2>Computadoras</h2>
+                <div class="slider">
+                    <div class="slider-track">
+                        <!-- Los productos de productos.js se cargan aquí -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <div id="footer-container"></div>
+</body>
+<script src="./assets/js/header.js"></script>
+<script src="./assets/js/footer.js"></script>
+<script src="./assets/js/productos.js"></script>
+<script src="./assets/js/renderProductos.js"></script>
+
+</html>

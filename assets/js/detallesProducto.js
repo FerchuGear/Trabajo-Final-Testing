@@ -1,14 +1,14 @@
-// Obtener el parámetro 'id' de la URL
+//Obtener el parámetro 'id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const productoId = Number(urlParams.get('id')); // Convertir el id a número
 
-// Buscar el producto en la lista de productos
+//Buscar el producto en la lista de productos
 const producto = productos.find(p => p.id === productoId);
 
-// Mostrar los detalles del producto
+//Mostrar los detalles del producto
 const detallesContainer = document.querySelector('main');
 if (producto) {
-    // Renderizar columna izquierda con imágenes cliqueables
+    //Renderizar columna izquierda con imágenes cliqueables
     const imagenesHtml = producto.imagenes.map(imagen => `
         <img src="${imagen}" alt="${producto.nombre}" class="thumbnail" onclick="mostrarImagenPrincipal('${imagen}')">
     `).join('');
@@ -31,8 +31,16 @@ if (producto) {
     detallesContainer.innerHTML = `<p>Producto no encontrado.</p>`;
 }
 
-// Función para cambiar la imagen principal
+//Función para cambiar la imagen principal
 function mostrarImagenPrincipal(imagen) {
     const imagenPrincipal = document.getElementById('imagen-principal');
     imagenPrincipal.src = imagen;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+        window.location.href = './productos.html';
+    });
+});
+

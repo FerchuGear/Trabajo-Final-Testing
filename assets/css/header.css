@@ -33,6 +33,18 @@ nav a {
     width: 100%;
 }
 
+header{
+    transition: margin-left 0.3s ease; /* Animación para el margen dinámico */
+}
+
+header.maximized{
+    margin-left: 250px; /* Solo cuando el panel está maximizado */
+}
+
+header.shifted{
+    margin-left: 0; /* Ajustar cuando el panel esté minimizado */
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;

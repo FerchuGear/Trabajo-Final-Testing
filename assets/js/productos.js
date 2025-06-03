@@ -2,7 +2,7 @@ const productos = [
     {
         id: 1,
         nombre: "Tablet Galaxy Tab A8",
-        descripcion: "Una excelente tablet para trabajar y estudiar.",
+        descripcion: "Android, Octa-Core 2GHz, Pantalla 10.5, RAM 4GB, 64GB, Cámara 8.0MP",
         categoria: "Tablets",
         imagen: "./assets/images/stock/tablet-samsung-galaxy-a8.png",
         imagenes: [
@@ -15,7 +15,7 @@ const productos = [
     {
         id: 2,
         nombre: "Samsung Galaxy S23 Ultra",
-        descripcion: "Última generación con gran rendimiento.",
+        descripcion: "Android, Octa-Core 2GHz, Pantalla 6.1, RAM 8GB, 128GB, Cámara 50Mpx",
         categoria: "Celulares",
         imagen: "./assets/images/stock/samsung-galaxy-s23-ultra.png",
         imagenes: [
@@ -23,12 +23,12 @@ const productos = [
             "./assets/images/stock/samsung-galaxy-s23-ultra-side.png",
             "./assets/images/stock/samsung-galaxy-s23-ultra-back.png"
         ],
-        precio: 299999
+        precio: 801449.00
     },
     {
         id: 3,
         nombre: "iPhone 14 Pro",
-        descripcion: "Potente y elegante, ideal para todo tipo de uso.",
+        descripcion: "iOS, Apple A16 Bionic 3.36GHz, Pantalla 6.1, RAM 6GB, 128GB, Cámara 48Mpx",
         categoria: "Celulares",
         imagen: "./assets/images/stock/iphone-14-pro.png",
         imagenes: [
@@ -36,7 +36,7 @@ const productos = [
             "./assets/images/stock/iphone-14-pro-side.png",
             "./assets/images/stock/iphone-14-pro-back.png"
         ],
-        precio: 489999
+        precio: 1137623.00
     },
     {
         id: 4,
