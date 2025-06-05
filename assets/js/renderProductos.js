@@ -139,8 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('maximized');
             header.classList.add('shifted');
             footer.classList.remove('maximized');
-            footer.classList.add('shifted');
-            toggleButton.innerHTML = '&rarr;';
+            footer.classList.add('shifted')
         } else {
             container.classList.remove('shifted');
             container.classList.add('maximized');
@@ -148,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('maximized');
             footer.classList.remove('shifted');
             footer.classList.add('maximized');
-            toggleButton.innerHTML = '&larr;';
         }
     }
 
@@ -164,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('shifted');
             footer.classList.remove('maximized');
             footer.classList.add('shifted');
-            toggleButton.innerHTML = '&rarr;'; // Flecha hacia la derecha
         } else {
             container.classList.remove('shifted');
             container.classList.add('maximized');
@@ -172,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('maximized');
             footer.classList.remove('shifted');
             footer.classList.add('maximized');
-            toggleButton.innerHTML = '&larr;'; // Flecha hacia la izquierda
         }
     });
 });
