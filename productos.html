@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectroUADE</title>
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/section.css">
-    <link rel="stylesheet" href="./assets/css/buttons.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/section.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <!-- Contenido principal -->
         <!-- Panel lateral para filtros -->
         <aside class="side-panel minimized">
-            <button id="toggle-panel" class="toggle-panel" style="padding: 0;"><img src="./assets/images/iconos/barra-de-menus.png"></button>
+            <button id="toggle-panel" class="toggle-panel" style="padding: 0;"><img src="../images/iconos/barra-de-menus.png"></button>
             <h3>Filtrar por categoría</h3>
             <form id="filter-form">
                 <label>
@@ -70,10 +70,13 @@
         </main>
         <!-- Footer -->
         <div id="footer-container"></div>
+        <script src="../js/header.js"></script>
+        <script src="../js/footer.js"></script>
+        <script src="../js/carrito.js"></script>
+        <script src="../js/productos.js"></script>
+        <script src="../js/renderProductos.js"></script>
+        <div id="carrito-notification" class="hidden">
+                <span id="notification-text"></span>
+        </div>
 </body>
-<script src="./assets/js/header.js"></script>
-<script src="./assets/js/footer.js"></script>
-<script src="./assets/js/productos.js"></script>
-<script src="./assets/js/renderProductos.js"></script>
-
 </html>

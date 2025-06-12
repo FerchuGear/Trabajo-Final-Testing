@@ -1,5 +1,4 @@
 // Script específico para la página del carrito
-let carrito = [] // Declare the carrito variable
 const vaciarCarrito = () => {
   carrito = []
   mostrarCarrito()
@@ -63,7 +62,7 @@ function mostrarProductosCarrito(carritoList) {
     li.innerHTML = `
             <div class="item-imagen">
                 <img src="${producto.imagen}" alt="${producto.nombre}" 
-                     onerror="this.src='./assets/images/placeholder.jpg'">
+                     onerror="this.src='../images/placeholder.jpg'">
             </div>
             <div class="item-info">
                 <h3>${producto.nombre}</h3>

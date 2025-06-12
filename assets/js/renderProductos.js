@@ -16,14 +16,21 @@ window.addEventListener('DOMContentLoaded', () => {
         productosRecientes.forEach(producto => {
             const card = document.createElement("div");
             card.classList.add("card", "producto");
-
             card.innerHTML = `
-            <h4>${producto.nombre}</h4>
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-            <p>${producto.descripcion}</p>
-            <h2>$${producto.precio}</h2>
-            <button class="add-to-cart">Añadir al carrito</button>
-        `;
+                <h4>${producto.nombre}</h4>
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <p>${producto.descripcion}</p>
+                <h2>$${producto.precio}</h2>
+                <button class="add-to-cart" 
+                        data-id="${producto.id}" 
+                        data-nombre="${producto.nombre}" 
+                        data-precio="${producto.precio}"
+                        data-imagen="${producto.imagen}"
+                        data-categoria="${producto.categoria}">
+                    Añadir al carrito
+                </button>
+            `;
+
 
             const addToCartButton = card.querySelector('.add-to-cart');
             addToCartButton.addEventListener('click', () => {
