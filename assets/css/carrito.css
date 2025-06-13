@@ -1,0 +1,245 @@
+/* Estilos específicos para el carrito */
+
+/* Página del carrito */
+#carrito-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 80vh;
+}
+
+#carrito-container h1 {
+  color: #dc2626;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Lista del carrito */
+#carrito-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.carrito-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+}
+
+.item-imagen img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.item-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.item-precio {
+  font-weight: bold;
+  color: #dc2626;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Controles de cantidad */
+.item-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.btn-cantidad {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #dc2626;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.btn-cantidad:hover {
+  background: #b91c1c;
+}
+
+.cantidad {
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.item-subtotal {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.btn-eliminar {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-eliminar:hover {
+  background: #dc2626;
+}
+
+/* Resumen del carrito */
+.carrito-resumen {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.carrito-resumen h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.resumen-linea {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.resumen-linea.total {
+  border-top: 2px solid #e5e5e5;
+  padding-top: 15px;
+  font-size: 1.2rem;
+  color: #dc2626;
+}
+
+.carrito-acciones {
+  margin-top: 20px;
+}
+
+.carrito-acciones button,
+.carrito-acciones a {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b91c1c;
+}
+
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+/* Carrito vacío */
+.carrito-vacio {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.carrito-vacio h1 {
+  color: #dc2626;
+  margin-bottom: 30px;
+}
+
+.carrito-vacio-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-vacio h2 {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.carrito-vacio p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrito-item {
+    grid-template-columns: 60px 1fr;
+    gap: 15px;
+  }
+
+  .item-cantidad,
+  .item-subtotal,
+  .item-acciones {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+  .item-imagen img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #carrito-container {
+    padding: 10px;
+  }
+}
+
+/* Mensaje de notificación */
+.mensaje-carrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

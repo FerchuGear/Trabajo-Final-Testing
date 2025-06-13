@@ -23,7 +23,14 @@ if (producto) {
                 <img id="imagen-principal" src="${producto.imagen}" alt="${producto.nombre}">
                 <p>${producto.descripcion}</p>
                 <p><strong>Precio:</strong> $${producto.precio}</p>
-                <button>Añadir al carrito</button>
+                <button class="add-to-cart" 
+                        data-id="${producto.id}" 
+                        data-nombre="${producto.nombre}" 
+                        data-precio="${producto.precio}"
+                        data-imagen="${producto.imagen}"
+                        data-categoria="${producto.categoria}">
+                    Añadir al carrito
+                </button>
             </section>
         </div>
     `;

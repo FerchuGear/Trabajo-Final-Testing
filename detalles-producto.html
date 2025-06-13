@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroUADE</title>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/section.css">
+    <link rel="stylesheet" href="./assets/css/buttons.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Sección principal -->
+        <main>
+            <button id="back-button" class="back-button">← Productos</button>
+            <!-- Los detalles del producto se cargarán aquí -->
+        </main>
+        
+        <!-- Footer -->
+        <div id="footer-container"></div>
+    </div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ElectroUADE</title>
-        <link rel="stylesheet" href="./assets/css/header.css">
-        <link rel="stylesheet" href="./assets/css/section.css">
-        <link rel="stylesheet" href="./assets/css/buttons.css">
-        <link rel="stylesheet" href="./assets/css/footer.css">
-    </head>
-
-    <body>
-
-        <div id="header-container"></div>
-        <!-- Contenido principal -->
-        <div class="container">
-            <!-- Sección principal -->
-            <main>
-                <button id="back-button" class="back-button">Productos</button>
-                <!-- Los detalles del producto se cargarán aquí -->
-            </main>
-            <!-- Footer -->
-            <div id="footer-container"></div>
-        </div>
-
-        <script src="./assets/js/header.js"></script>
-        <script src="./assets/js/footer.js"></script>
-        <script src="./assets/js/productos.js"></script>
-        <script src="./assets/js/detallesProducto.js"></script>
-    </body>
-
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/carrito.js"></script>
+    <script src="./assets/js/productos.js"></script>
+    <script src="./assets/js/detallesProducto.js"></script>
+    <div id="carrito-notification" class="hidden">
+        <span id="notification-text"></span>
+    </div>
+</body>
 </html>

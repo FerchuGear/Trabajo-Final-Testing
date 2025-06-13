@@ -169,25 +169,30 @@ ul li a {
 }
 
 .toggle-panel {
+    display: flex;
     position: absolute;
-    top: 20px;
     right: 5px; /* Ajusta la posición para evitar desbordamiento */
     width: 30px;
     height: 30px;
-    background-color: #007BFF;
+    background-color: #b3b7bb;
     color: #fff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 16px;
-    text-align: center;
-    line-height: 30px;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .toggle-panel:hover {
-    background-color: #0056b3;
+    background-color: #7a7d80;
+}
+
+.toggle-panel img{
+    width: 20px;
+    height: 20px;
 }
 
 .side-panel h3 {

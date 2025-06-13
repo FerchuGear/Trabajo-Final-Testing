@@ -1,10 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../assets/components/header.html").then(function (response) {
-        return response.text();
-    }).then(function (html) {
-        document.getElementById("header-container").innerHTML = html;
-        initializeNavbarEvents();
-    }).catch(function (error) {
-        console.error(error);
-    });
+    // La ruta correcta: Desde el HTML en la raíz, entra a 'assets', luego a 'components'.
+    fetch("./assets/components/header.html")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Respuesta de red no fue ok " + response.statusText);
+            }
+            return response.text();
+        })
+        .then(function (html) {
+            const container = document.getElementById("header-container");
+            if (container) {
+                container.innerHTML = html;
+            }
+        })
+        .catch(function (error) {
+            console.error('Error al cargar el header:', error);
+        });
 });

@@ -16,14 +16,21 @@ window.addEventListener('DOMContentLoaded', () => {
         productosRecientes.forEach(producto => {
             const card = document.createElement("div");
             card.classList.add("card", "producto");
-
             card.innerHTML = `
-            <h4>${producto.nombre}</h4>
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-            <p>${producto.descripcion}</p>
-            <h2>$${producto.precio}</h2>
-            <button class="add-to-cart">Añadir al carrito</button>
-        `;
+                <h4>${producto.nombre}</h4>
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <p>${producto.descripcion}</p>
+                <h2>$${producto.precio}</h2>
+                <button class="add-to-cart" 
+                        data-id="${producto.id}" 
+                        data-nombre="${producto.nombre}" 
+                        data-precio="${producto.precio}"
+                        data-imagen="${producto.imagen}"
+                        data-categoria="${producto.categoria}">
+                    Añadir al carrito
+                </button>
+            `;
+
 
             const addToCartButton = card.querySelector('.add-to-cart');
             addToCartButton.addEventListener('click', () => {
@@ -139,8 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.remove('maximized');
             header.classList.add('shifted');
             footer.classList.remove('maximized');
-            footer.classList.add('shifted');
-            toggleButton.innerHTML = '&rarr;';
+            footer.classList.add('shifted')
         } else {
             container.classList.remove('shifted');
             container.classList.add('maximized');
@@ -148,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('maximized');
             footer.classList.remove('shifted');
             footer.classList.add('maximized');
-            toggleButton.innerHTML = '&larr;';
         }
     }
 
@@ -164,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('shifted');
             footer.classList.remove('maximized');
             footer.classList.add('shifted');
-            toggleButton.innerHTML = '&rarr;'; // Flecha hacia la derecha
         } else {
             container.classList.remove('shifted');
             container.classList.add('maximized');
@@ -172,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('maximized');
             footer.classList.remove('shifted');
             footer.classList.add('maximized');
-            toggleButton.innerHTML = '&larr;'; // Flecha hacia la izquierda
         }
     });
 });
