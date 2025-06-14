@@ -161,6 +161,7 @@ function actualizarCantidad(index, nuevaCantidad) {
 
 // Función para eliminar un producto del carrito
 function eliminarDelCarrito(index) {
-  carrito.splice(index, 1)
-  mostrarCarrito()
+  window.carritoManager.eliminarProducto(carrito[index].id);
+  carrito.splice(index, 1);
+  mostrarCarrito();
 }
