@@ -1,71 +1,80 @@
+/* Estilos base */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    display: flex; 
-    align-items: center; 
-}
-
-header img {
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 60px; 
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    gap: 15px;
-    margin-left: 20px;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
+  background-color: #272727;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px 20px;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header{
-    transition: margin-left 0.3s ease; /* Animación para el margen dinámico */
+.logo {
+  height: 50px;
 }
 
-header.maximized{
-    margin-left: 250px; /* Solo cuando el panel está maximizado */
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-header.shifted{
-    margin-left: 0; /* Ajustar cuando el panel esté minimizado */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
+.carrito-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#carrito-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    header img {
-        height: 50px;
-        margin-bottom: 10px;
-    }
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        margin-left: 0;
-        width: 100%;
-    }
+  nav.active {
+    display: flex;
+  }
 
-    nav a {
-        text-align: left;
-        padding: 5px 0;
-    }
+  nav a {
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
