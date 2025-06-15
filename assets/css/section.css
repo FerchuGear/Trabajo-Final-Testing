@@ -52,29 +52,40 @@ ul li a {
 }
 
 .slider {
-    display: flex;
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
-    scroll-behavior: smooth; /* Desplazamiento suave */
-    padding: 10px 0;
-}
-
-.slider::-webkit-scrollbar {
-    height: 8px; /* Altura de la barra de desplazamiento */
-}
-
-.slider::-webkit-scrollbar-thumb {
-    background: #ccc; /* Color del pulgar de la barra */
-    border-radius: 4px;
-}
-
-.slider::-webkit-scrollbar-thumb:hover {
-    background: #aaa; /* Color al pasar el mouse */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .slider-track {
-    display: flex;
-    gap: 10px; /* Espaciado entre las tarjetas */
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 16px;
+}
+
+.slider-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: #272727;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.slider-btn-prev {
+  left: 8px;
+}
+
+.slider-btn-next {
+  right: 8px;
 }
 
 .card {
@@ -217,5 +228,10 @@ ul li a {
 
 /* Diseños para Celulares */
 @media (max-width: 768px) {
-    
+  .slider-track {
+    gap: 0;
+  }
+  .slider-btn {
+    display: block;
+  }
 }

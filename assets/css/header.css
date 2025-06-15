@@ -24,7 +24,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
 }
 
@@ -60,21 +60,48 @@ nav a {
   nav {
     display: none;
     flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     width: 100%;
-    margin-top: 10px;
+    background: #272727;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    margin-top: 0;
+    gap: 0;
+  }
+
+  nav a {
+    padding: 16px 0;
+    margin-left: 20px;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
   }
 
   nav.active {
     display: flex;
-  }
-
-  nav a {
-    padding: 10px 0;
-    border-top: 1px solid #eee;
+    position: fixed;
+    color: bisque;
+    top: 130px;
+    left: 0;
+    width: 100vw;
+    right: 0;
+    z-index: 1000;
   }
 
   .header-container {
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
   }
 }

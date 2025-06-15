@@ -122,7 +122,9 @@ function mostrarResumenCarrito(container) {
                 <button class="btn-secondary btn-vaciar" onclick="confirmarVaciarCarrito()">
                     Vaciar carrito
                 </button>
-                <a href="productos.html" class="btn-secondary">Seguir comprando</a>
+                <button class="btn-secondary" onclick="window.location.href='productos.html'">
+                    Seguir comprando
+                </button>
             </div>
         </div>
     `

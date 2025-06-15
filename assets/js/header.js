@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const container = document.getElementById("header-container");
         if (container) {
             container.innerHTML = html;
+            // Agrega el event listener después de insertar el HTML
+            const menuToggle = container.querySelector('#menu-toggle');
+            const navMenu = container.querySelector('#nav-menu');
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                });
+            }
         }
     })
     .catch(function (error) {
         console.error('Error al cargar el header:', error);
-    });
-
-    const toggleBtn = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    
-    toggleBtn.addEventListener('click', function () {
-      navMenu.classList.toggle('active');
     });
 });
 
