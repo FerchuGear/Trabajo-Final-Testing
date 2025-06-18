@@ -2,6 +2,7 @@
 const vaciarCarrito = () => {
   carrito = []
   mostrarCarrito()
+  window.carritoManager.vaciarCarrito(); // Llamar al método de carritoManager para vaciar el carrito
 } // Declare the vaciarCarrito function
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,9 +133,11 @@ function mostrarResumenCarrito(container) {
 
 // Función para confirmar vaciado del carrito
 function confirmarVaciarCarrito() {
-  if (confirm("¿Estás seguro de que quieres vaciar todo el carrito?")) {
-    vaciarCarrito()
-  }
+//  if (confirm("¿Estás seguro de que quieres vaciar todo el carrito?")) {
+    carrito = []
+    mostrarCarrito()
+    window.carritoManager.vaciarCarrito();
+//  }
 }
 
 // Función para finalizar compra
