@@ -1,8 +1,18 @@
 /* Estilos base */
+/* Agrega esto al principio o donde esté tu .container o main */
+.container, main {
+  margin-top: 70px; /* Ajusta según la altura real de tu header */
+}
+
 header {
   background-color: #272727;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 10px 20px;
+  position: fixed;      /* Fijo arriba */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 3000;
 }
 
 .header-container {
