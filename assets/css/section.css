@@ -52,41 +52,56 @@ ul li a {
 }
 
 .slider {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+    display: flex;
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    padding: 10px 0;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px; /* Altura de la barra de desplazamiento */
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color del pulgar de la barra */
+    border-radius: 4px;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #aaa; /* Color al pasar el mouse */
 }
 
 .slider-track {
-  display: flex;
-  transition: transform 0.3s ease;
-  gap: 16px;
+    display: flex;
+    gap: 10px; /* Espaciado entre las tarjetas */
+    transition: transform 0.5s ease;
 }
 
-.slider-btn {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  background: #272727;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0.8;
+/* Comentamos los botones del slider porque no terminan siendo necesarios al tener overflow-x en slider */
+/* .slider-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: #272727;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .slider-btn-prev {
-  left: 8px;
+    left: 8px;
 }
 
 .slider-btn-next {
-  right: 8px;
-}
+    right: 8px;
+} */
 
 .card {
     flex: 0 0 auto; /* Evita que las tarjetas se reduzcan o expandan */
